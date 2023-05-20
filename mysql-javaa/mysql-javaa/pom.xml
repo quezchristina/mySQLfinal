@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.promineotech</groupId>
+  <artifactId>mysql-javaa</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- adding Java version as a property in the Maven POM-->
+	<!-- setting java.version element, 17-->
+	<properties>
+		<java.version> 17 </java.version>
+	</properties>
+	<!-- adding MySQL driver as a dependency in the dependencies section-->
+	<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j/8.0.33-->
+	<!-- MySQL Connector/J-->
+	<dependencies>
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>8.0.33</version>
+		</dependency>
+	</dependencies>
+	
+	<!-- https://maven.apache.org/plugins/maven-compiler-plugin/usage.html-->
+	<!-- add definition for Maven compiler plugin-->
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.11.0</version>
+					<configuration>
+						<source> ${java.version}</source>
+						<target>${java.version}</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
